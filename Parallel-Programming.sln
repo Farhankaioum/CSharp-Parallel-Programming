@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinLock_LockRecursion", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MutexAllAbout", "MutexAllAbout\MutexAllAbout.csproj", "{73BFA29C-B2EE-499D-8F55-4DE3DDE81C63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadAndWriteLockInTasks", "ReadAndWriteLockInTasks\ReadAndWriteLockInTasks.csproj", "{26665F88-6258-409E-B2C8-2D5571A1C32D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{73BFA29C-B2EE-499D-8F55-4DE3DDE81C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73BFA29C-B2EE-499D-8F55-4DE3DDE81C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73BFA29C-B2EE-499D-8F55-4DE3DDE81C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26665F88-6258-409E-B2C8-2D5571A1C32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26665F88-6258-409E-B2C8-2D5571A1C32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26665F88-6258-409E-B2C8-2D5571A1C32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26665F88-6258-409E-B2C8-2D5571A1C32D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
