@@ -5,31 +5,52 @@ using System.Threading.Tasks;
 
 namespace IntroducingTasks
 {
-    class WaitingForTimeToPass
+    class WaitingForTasks
     {
         static void Main(string[] args)
         {
-            // we've already seen the classic Thread.Sleep
-
             var cts = new CancellationTokenSource();
+            cts.CancelAfter(TimeSpan.FromSeconds(3));
             var token = cts.Token;
+
             var t = new Task(() =>
             {
-                Console.WriteLine("You have 5 seconds to disarm this bomb by pressing a key");
-                bool canceled = token.WaitHandle.WaitOne(5000);
-                Console.WriteLine(canceled ? "Bomb disarmed." : "BOOM!!!!");
-            }, token);
+                Console.WriteLine("I take 5 seconds");
+                //Thread.Sleep(5000);
+
+                for (int i = 0; i < 5; ++i)
+                {
+                    token.ThrowIfCancellationRequested();
+                    Thread.Sleep(1000);
+                }
+
+                Console.WriteLine("I'm done.");
+            });
             t.Start();
 
-            // unlike sleep and waitone
-            // thread does not give up its turn
-            // avoiding a context switch
-            Thread.SpinWait(10000);
-            SpinWait.SpinUntil(() => false);
-            Console.WriteLine("Are you still here?");
+            var t2 = Task.Factory.StartNew(() => Thread.Sleep(3000), token);
 
-            Console.ReadKey();
-            cts.Cancel();
+            //t.Wait();
+            //t.Wait(3000);
+
+            // now introduce t2
+
+            //Task.WaitAll(t, t2);
+            //Task.WaitAny(t, t2);
+
+            // start w/o token
+            try
+            {
+                // throws on a canceled token
+                Task.WaitAll(new[] { t, t2 }, 4000, token);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e);
+            }
+
+            Console.WriteLine($"Task t  status is {t.Status}.");
+            Console.WriteLine($"Task t2 status is {t2.Status}.");
 
             Console.WriteLine("Main program done, press any key.");
             Console.ReadKey();
