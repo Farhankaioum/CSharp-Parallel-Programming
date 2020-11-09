@@ -17,6 +17,30 @@ namespace IntroducingTasks
             Console.ReadKey();
         }
 
+        // Waiting for completing task
+        private static void WaitingForTimeToPass()
+        {
+            // we've already seen the classic Thread.Sleep
+
+            var cts = new CancellationTokenSource();
+            var token = cts.Token;
+            var t = new Task(() =>
+            {
+                Console.WriteLine("You have 5 seconds to disarm this bomb by pressing a key");
+                bool canceled = token.WaitHandle.WaitOne(5000);
+                Console.WriteLine(canceled ? "Bomb disarmed." : "BOOM!!!!");
+            }, token);
+            t.Start();
+
+            // unlike sleep and waitone
+            // thread does not give up its turn
+            Thread.SpinWait(10000);
+            Console.WriteLine("Are you still here?");
+
+            Console.ReadKey();
+            cts.Cancel();
+        }
+
         private static void CompositeCancelationToken()
         {
             // it's possible to create a 'composite' cancelation source that involves several tokens
