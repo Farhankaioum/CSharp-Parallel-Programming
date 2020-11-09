@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskExceptionHandling", "Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CriticalSectionInTask", "CriticalSectionInTask\CriticalSectionInTask.csproj", "{CE40325F-004E-49ED-9141-0F452DA0A54F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinLock_LockRecursion", "SpinLock_LockRecursion\SpinLock_LockRecursion.csproj", "{CA273E04-F2BF-47E0-877F-C7539237F23F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CE40325F-004E-49ED-9141-0F452DA0A54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE40325F-004E-49ED-9141-0F452DA0A54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE40325F-004E-49ED-9141-0F452DA0A54F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA273E04-F2BF-47E0-877F-C7539237F23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA273E04-F2BF-47E0-877F-C7539237F23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA273E04-F2BF-47E0-877F-C7539237F23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA273E04-F2BF-47E0-877F-C7539237F23F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
