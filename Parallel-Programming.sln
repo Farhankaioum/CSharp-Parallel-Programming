@@ -25,17 +25,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Sharing And Synchroniz
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concurrent Collections", "Concurrent Collections", "{49203A20-AEC0-4B48-891C-6A8E178B3D40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentCollection", "ConcurrentDictionary\ConcurrentCollection.csproj", "{90115798-1127-4CA0-8352-468815500BD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcurrentCollection", "ConcurrentDictionary\ConcurrentCollection.csproj", "{90115798-1127-4CA0-8352-468815500BD3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task Coordination", "Task Coordination", "{AB23C83B-8899-4420-B837-748BC534BF26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContinuationsTask", "ContinuationsTask\ContinuationsTask.csproj", "{FEF11B94-51D5-46B4-855D-56F981175E37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContinuationsTask", "ContinuationsTask\ContinuationsTask.csproj", "{FEF11B94-51D5-46B4-855D-56F981175E37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildTasks", "ChildTasks\ChildTasks.csproj", "{89B64CC0-B02F-4707-94DC-31BC757B36D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildTasks", "ChildTasks\ChildTasks.csproj", "{89B64CC0-B02F-4707-94DC-31BC757B36D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barrier", "Barrier\Barrier.csproj", "{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barrier", "Barrier\Barrier.csproj", "{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "countdownEvent", "countdownEvent\countdownEvent.csproj", "{A235BEC1-8EC6-408E-98F5-20B1C37C3E06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "countdownEvent", "countdownEvent\countdownEvent.csproj", "{A235BEC1-8EC6-408E-98F5-20B1C37C3E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountDownEventP", "CountDownEventP\CountDownEventP.csproj", "{A83DA362-BE01-4AE8-84F3-94DEA791D07A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{A235BEC1-8EC6-408E-98F5-20B1C37C3E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A235BEC1-8EC6-408E-98F5-20B1C37C3E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A235BEC1-8EC6-408E-98F5-20B1C37C3E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83DA362-BE01-4AE8-84F3-94DEA791D07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83DA362-BE01-4AE8-84F3-94DEA791D07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83DA362-BE01-4AE8-84F3-94DEA791D07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83DA362-BE01-4AE8-84F3-94DEA791D07A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +119,7 @@ Global
 		{89B64CC0-B02F-4707-94DC-31BC757B36D3} = {AB23C83B-8899-4420-B837-748BC534BF26}
 		{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49} = {AB23C83B-8899-4420-B837-748BC534BF26}
 		{A235BEC1-8EC6-408E-98F5-20B1C37C3E06} = {DFD1A8D3-601B-402C-9D41-71DEE51F62AD}
+		{A83DA362-BE01-4AE8-84F3-94DEA791D07A} = {AB23C83B-8899-4420-B837-748BC534BF26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31697BAF-851A-4531-B86C-2968428C2A50}
