@@ -7,6 +7,7 @@ namespace ConcurrentCollections
         static void Main_(string[] args)
         {
             ConcurrentDictionary.DictionaryP();
+            ConcurrentQueue.QueueP();
             ConcurrentStack.StackP();
         }
     }
