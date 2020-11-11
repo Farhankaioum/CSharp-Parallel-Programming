@@ -39,6 +39,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "countdownEvent", "countdown
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountDownEventP", "CountDownEventP\CountDownEventP.csproj", "{A83DA362-BE01-4AE8-84F3-94DEA791D07A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualResetAndAutoResetEvent", "ManualResetAndAutoResetEvent\ManualResetAndAutoResetEvent.csproj", "{46BCF0DA-312A-433E-B28B-242099D1C7FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemaphoreSlim", "SemaphoreSlim\SemaphoreSlim.csproj", "{68B185C4-1C5D-49CA-8C5F-837A054F28AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,14 @@ Global
 		{A83DA362-BE01-4AE8-84F3-94DEA791D07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A83DA362-BE01-4AE8-84F3-94DEA791D07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A83DA362-BE01-4AE8-84F3-94DEA791D07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46BCF0DA-312A-433E-B28B-242099D1C7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46BCF0DA-312A-433E-B28B-242099D1C7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46BCF0DA-312A-433E-B28B-242099D1C7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46BCF0DA-312A-433E-B28B-242099D1C7FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B185C4-1C5D-49CA-8C5F-837A054F28AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B185C4-1C5D-49CA-8C5F-837A054F28AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B185C4-1C5D-49CA-8C5F-837A054F28AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B185C4-1C5D-49CA-8C5F-837A054F28AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +132,8 @@ Global
 		{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49} = {AB23C83B-8899-4420-B837-748BC534BF26}
 		{A235BEC1-8EC6-408E-98F5-20B1C37C3E06} = {DFD1A8D3-601B-402C-9D41-71DEE51F62AD}
 		{A83DA362-BE01-4AE8-84F3-94DEA791D07A} = {AB23C83B-8899-4420-B837-748BC534BF26}
+		{46BCF0DA-312A-433E-B28B-242099D1C7FA} = {AB23C83B-8899-4420-B837-748BC534BF26}
+		{68B185C4-1C5D-49CA-8C5F-837A054F28AE} = {AB23C83B-8899-4420-B837-748BC534BF26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31697BAF-851A-4531-B86C-2968428C2A50}
