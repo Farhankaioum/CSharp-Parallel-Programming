@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContinuationsTask", "Contin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildTasks", "ChildTasks\ChildTasks.csproj", "{89B64CC0-B02F-4707-94DC-31BC757B36D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barrier", "Barrier\Barrier.csproj", "{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{89B64CC0-B02F-4707-94DC-31BC757B36D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89B64CC0-B02F-4707-94DC-31BC757B36D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89B64CC0-B02F-4707-94DC-31BC757B36D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +105,7 @@ Global
 		{90115798-1127-4CA0-8352-468815500BD3} = {49203A20-AEC0-4B48-891C-6A8E178B3D40}
 		{FEF11B94-51D5-46B4-855D-56F981175E37} = {AB23C83B-8899-4420-B837-748BC534BF26}
 		{89B64CC0-B02F-4707-94DC-31BC757B36D3} = {AB23C83B-8899-4420-B837-748BC534BF26}
+		{CAEC4133-01FB-4AAB-B2B4-1B97028B1C49} = {AB23C83B-8899-4420-B837-748BC534BF26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31697BAF-851A-4531-B86C-2968428C2A50}
