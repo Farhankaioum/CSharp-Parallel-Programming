@@ -7,6 +7,7 @@ namespace ParallelLoop
         static void Main(string[] args)
         {
             Loops.Loop();
+            ParallelLoops_BreakingAndStopping.BreakingAndStopping();
         }
     }
 }
