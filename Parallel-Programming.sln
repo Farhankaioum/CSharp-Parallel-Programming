@@ -37,15 +37,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Barrier", "Barrier\Barrier.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "countdownEvent", "countdownEvent\countdownEvent.csproj", "{A235BEC1-8EC6-408E-98F5-20B1C37C3E06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountDownEventP", "CountDownEventP\CountDownEventP.csproj", "{A83DA362-BE01-4AE8-84F3-94DEA791D07A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountDownEventP", "CountDownEventP\CountDownEventP.csproj", "{A83DA362-BE01-4AE8-84F3-94DEA791D07A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualResetAndAutoResetEvent", "ManualResetAndAutoResetEvent\ManualResetAndAutoResetEvent.csproj", "{46BCF0DA-312A-433E-B28B-242099D1C7FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManualResetAndAutoResetEvent", "ManualResetAndAutoResetEvent\ManualResetAndAutoResetEvent.csproj", "{46BCF0DA-312A-433E-B28B-242099D1C7FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemaphoreSlim", "SemaphoreSlim\SemaphoreSlim.csproj", "{68B185C4-1C5D-49CA-8C5F-837A054F28AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SemaphoreSlim", "SemaphoreSlim\SemaphoreSlim.csproj", "{68B185C4-1C5D-49CA-8C5F-837A054F28AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parallel Loops", "Parallel Loops", "{2D6543AE-2567-4D28-AC97-3B80D0E2F878}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelLoop", "ParallelLoop\ParallelLoop.csproj", "{0EE43A97-D262-4FA6-BC15-D083438434A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelLoop", "ParallelLoop\ParallelLoop.csproj", "{0EE43A97-D262-4FA6-BC15-D083438434A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parallel LINQ", "Parallel LINQ", "{A78F46D5-49CC-40BC-BB29-6CAEC61ED290}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelLINQ", "ParallelLINQ\ParallelLINQ.csproj", "{4F808C39-8F72-481C-9847-F349A8BE8629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +125,10 @@ Global
 		{0EE43A97-D262-4FA6-BC15-D083438434A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE43A97-D262-4FA6-BC15-D083438434A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EE43A97-D262-4FA6-BC15-D083438434A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F808C39-8F72-481C-9847-F349A8BE8629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F808C39-8F72-481C-9847-F349A8BE8629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F808C39-8F72-481C-9847-F349A8BE8629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F808C39-8F72-481C-9847-F349A8BE8629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -143,6 +151,7 @@ Global
 		{46BCF0DA-312A-433E-B28B-242099D1C7FA} = {AB23C83B-8899-4420-B837-748BC534BF26}
 		{68B185C4-1C5D-49CA-8C5F-837A054F28AE} = {AB23C83B-8899-4420-B837-748BC534BF26}
 		{0EE43A97-D262-4FA6-BC15-D083438434A7} = {2D6543AE-2567-4D28-AC97-3B80D0E2F878}
+		{4F808C39-8F72-481C-9847-F349A8BE8629} = {A78F46D5-49CC-40BC-BB29-6CAEC61ED290}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31697BAF-851A-4531-B86C-2968428C2A50}
