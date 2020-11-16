@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 
 namespace GettingStartLinq
@@ -19,7 +20,7 @@ namespace GettingStartLinq
             Console.WriteLine(Enumerable.Range('a', 'z' - 'a').Select(c => (char)c));
             Console.WriteLine(Enumerable.Range(1, 10).Select(i => new string('x', i)));
 
-            
+
             Console.WriteLine();
 
             var values = Enumerable.Range(1, 10).Select(i => {
