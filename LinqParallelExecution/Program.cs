@@ -9,7 +9,8 @@ namespace LinqParallelExecution
         static void Main(string[] args)
         {
             //ParallelLinqExample();
-            CancellationAndExceptionInParallelLinq();
+            //CancellationAndExceptionInParallelLinq();
+            MergeOptionInParallelLinqExecution();
 
         }
 
@@ -71,6 +72,25 @@ namespace LinqParallelExecution
             {
                 Console.WriteLine("cancel the operation");
             }
+        }
+
+        public static void MergeOptionInParallelLinqExecution()
+        {
+            var numbers = Enumerable.Range(1, 20).ToArray() ;
+
+            var results = numbers
+                .AsParallel()
+                .WithMergeOptions(ParallelMergeOptions.FullyBuffered)// if you want to product result first then consume, consume means print or show the result
+                .Select(i =>
+                {
+                    double result = Math.Log10(i);
+                    Console.Write($"P: {result}\t");
+                    return result;
+
+                });
+
+            foreach (var c in results)
+                Console.Write($"C: {c}\t");
         }
     }
 }
