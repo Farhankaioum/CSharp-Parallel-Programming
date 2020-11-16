@@ -20,6 +20,7 @@ namespace GettingStartLinq
             Console.WriteLine(Enumerable.Range(1, 10).Select(i => new string('x', i)));
 
 
+
             var values = Enumerable.Range(1, 10).Select(i => {
               
                 return i;
