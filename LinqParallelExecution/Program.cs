@@ -10,8 +10,8 @@ namespace LinqParallelExecution
         {
             //ParallelLinqExample();
             //CancellationAndExceptionInParallelLinq();
-            MergeOptionInParallelLinqExecution();
-
+            //MergeOptionInParallelLinqExecution();
+            CustomAggregationForParallelLinq();
         }
 
         public static void ParallelLinqExample()
@@ -93,7 +93,7 @@ namespace LinqParallelExecution
                 Console.Write($"C: {c}\t");
         }
 
-         public static void CustomAggregationForParallelLinq()
+         public static void  CustomAggregationForParallelLinq()
         {
             var normalSum = Enumerable.Range(1, 1000)
                 .Aggregate(0, (i, acc) => i + acc);
