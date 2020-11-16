@@ -92,5 +92,21 @@ namespace LinqParallelExecution
             foreach (var c in results)
                 Console.Write($"C: {c}\t");
         }
+
+         public static void CustomAggregationForParallelLinq()
+        {
+            var normalSum = Enumerable.Range(1, 1000)
+                .Aggregate(0, (i, acc) => i + acc);
+
+            var sum = ParallelEnumerable.Range(1, 1000)
+                .Aggregate(
+                    0, // seed value
+                    (partialSum, i) => partialSum += i, // An accumulator function to be invoked on each element in a partition.
+                    (total, subtotal) => total += subtotal, // An accumulator function to be invoked on the yielded accumulator result from
+                                                            //     each partition.
+                    i => i); // A function to transform the final accumulator value into the result value.
+
+            Console.WriteLine(sum);
+        }
     }
 }
