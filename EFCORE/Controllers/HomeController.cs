@@ -2,11 +2,10 @@
 using EFCORE.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Linq.Dynamic.Core;
 
 namespace EFCORE.Controllers
 {
@@ -21,9 +20,16 @@ namespace EFCORE.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string search = "")
         {
-            ViewBag.Employees = _context.Employees.ToList();
+            var employees = _context.Employees;
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                employees = (Microsoft.EntityFrameworkCore.DbSet<Employee>)employees.Where("name");
+            }
+
+            ViewBag.Employees = employees.ToList();
 
             return View();
         }
