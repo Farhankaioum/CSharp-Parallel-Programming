@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Z.EntityFramework.Extensions;
 
 namespace EFCORE
 {
@@ -27,6 +28,14 @@ namespace EFCORE
             services.AddDbContext<AppDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            // Using a constructor that requires optionsBuilder (EF Core) 
+            EntityFrameworkManager.ContextFactory = context =>
+            {
+                var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+                optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                return new AppDbContext(optionsBuilder.Options);
+            };
 
             services.AddControllersWithViews();
         }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EFCORE.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCORE.Data
 {
@@ -9,5 +10,7 @@ namespace EFCORE.Data
         {
 
         }
+
+        public DbSet<Employee> Employees { get; set; }
     }
 }

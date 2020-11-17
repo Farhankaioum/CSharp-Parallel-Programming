@@ -1,10 +1,9 @@
-﻿using System;
+﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Running;
+using System;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Threading.Tasks;
-using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Jobs;
-using BenchmarkDotNet.Running;
 
 namespace ParallelLoop
 {

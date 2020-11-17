@@ -1,4 +1,5 @@
-﻿using EFCORE.Models;
+﻿using EFCORE.Data;
+using EFCORE.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,15 +13,37 @@ namespace EFCORE.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
+            ViewBag.Employees = _context.Employees.ToList();
+
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Index(Employee model)
+        {
+            if (ModelState.IsValid)
+            {
+                var newModel = new List<Employee>();
+                newModel.Add(model);
+
+                _context.BulkInsert(newModel);
+                _context.BulkSaveChanges();
+
+                return RedirectToAction(nameof(Index));
+            }
+                
+            return View(model);
         }
 
         public IActionResult Privacy()
