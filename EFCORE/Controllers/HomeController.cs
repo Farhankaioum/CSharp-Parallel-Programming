@@ -2,6 +2,7 @@
 using EFCORE.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -23,13 +24,15 @@ namespace EFCORE.Controllers
         public IActionResult Index(string search = "")
         {
             var employees = _context.Employees;
+            var employeesList = new List<Employee>();
+            employeesList = employees.ToList();
 
             if (!string.IsNullOrEmpty(search))
             {
-                employees = (Microsoft.EntityFrameworkCore.DbSet<Employee>)employees.Where("name");
+                employeesList = employees.Where("name.Contains(@0)", search).ToList();
             }
 
-            ViewBag.Employees = employees.ToList();
+            ViewBag.Employees = employeesList;
 
             return View();
         }
@@ -40,6 +43,7 @@ namespace EFCORE.Controllers
         {
             if (ModelState.IsValid)
             {
+                model.JoinDate = DateTime.Now;
                 var newModel = new List<Employee>();
                 newModel.Add(model);
 
