@@ -5,4 +5,9 @@
     <RootNamespace>EFCORE_5</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WizLib.Models\WizLib.Models.csproj" />
+    <ProjectReference Include="..\WizLib_DataAccess\WizLib_DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

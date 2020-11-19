@@ -1,6 +1,6 @@
 using System;
 
-namespace EFCORE_5.Models
+namespace WizLib.Models.Models
 {
     public class ErrorViewModel
     {
