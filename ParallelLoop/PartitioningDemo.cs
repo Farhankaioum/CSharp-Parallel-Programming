@@ -1,5 +1,4 @@
-﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Running;
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
@@ -9,7 +8,7 @@ namespace ParallelLoop
 {
     public class PartitioningDemo
     {
-        [Benchmark]
+        //[Benchmark]
         public void SquareEachValue()
         {
             const int count = 100000;
@@ -18,7 +17,7 @@ namespace ParallelLoop
             Parallel.ForEach(values, x => { results[x] = (int)Math.Pow(x, 2); });
         }
 
-        [Benchmark]
+        //[Benchmark]
         public void SquareEachValueChunked()
         {
             const int count = 100000;

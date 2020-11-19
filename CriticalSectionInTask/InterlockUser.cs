@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 
 namespace DataSharingAndSynchronization
 {
@@ -31,40 +27,40 @@ namespace DataSharingAndSynchronization
     // interlocked class contains atomic operations on variables
     // atomic = cannot be interrupted
 
-    class InterlockedOperations
-    {
-        static void Main(string[] args)
-        {
-            var tasks = new List<Task>();
-            var ba = new BankAccount();
+    //class InterlockedOperations
+    //{
+    //    public static void Main()
+    //    {
+    //        var tasks = new List<Task>();
+    //        var ba = new BankAccount();
 
-            for (int i = 0; i < 10; ++i)
-            {
-                tasks.Add(Task.Factory.StartNew(() =>
-                {
-                    for (int j = 0; j < 1000; ++j)
-                        ba.Deposit(100);
-                }));
-                tasks.Add(Task.Factory.StartNew(() =>
-                {
-                    for (int j = 0; j < 1000; ++j)
-                        ba.Withdraw(100);
-                }));
-            }
+    //        for (int i = 0; i < 10; ++i)
+    //        {
+    //            tasks.Add(Task.Factory.StartNew(() =>
+    //            {
+    //                for (int j = 0; j < 1000; ++j)
+    //                    ba.Deposit(100);
+    //            }));
+    //            tasks.Add(Task.Factory.StartNew(() =>
+    //            {
+    //                for (int j = 0; j < 1000; ++j)
+    //                    ba.Withdraw(100);
+    //            }));
+    //        }
 
-            Task.WaitAll(tasks.ToArray());
+    //        Task.WaitAll(tasks.ToArray());
 
-            Console.WriteLine($"Final balance is {ba.Balance}.");
+    //        Console.WriteLine($"Final balance is {ba.Balance}.");
 
-            // show interlocked methods here
+    //        // show interlocked methods here
 
-            // Interlocked.MemoryBarrier is a wrapper for Thread.MemoryBarrier
-            // only required on memory systems that have weak memory ordering (e.g., Itanium)
-            // prevents the CPU from reordering the instructions such that those before the barrier
-            // execute after those after
+    //        // Interlocked.MemoryBarrier is a wrapper for Thread.MemoryBarrier
+    //        // only required on memory systems that have weak memory ordering (e.g., Itanium)
+    //        // prevents the CPU from reordering the instructions such that those before the barrier
+    //        // execute after those after
 
 
-            Console.WriteLine("All done here.");
-        }
-    }
+    //        Console.WriteLine("All done here.");
+    //    }
+    //}
 }
