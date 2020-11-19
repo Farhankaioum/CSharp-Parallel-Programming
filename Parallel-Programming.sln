@@ -65,7 +65,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqParallelExecution", "Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreLinqPackage_LINQ", "MoreLinqPackage_LINQ\MoreLinqPackage_LINQ.csproj", "{2752954F-25E9-4DCD-BEE8-795492BE5836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCORE", "EFCORE\EFCORE.csproj", "{AB2FD6AA-65B4-4EDF-AB20-AA5B38564CB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCORE", "EFCORE\EFCORE.csproj", "{AB2FD6AA-65B4-4EDF-AB20-AA5B38564CB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCORE-5", "EFCORE-5\EFCORE-5.csproj", "{06D35967-F4C4-48DF-82F4-00E7FDEA8876}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +163,10 @@ Global
 		{AB2FD6AA-65B4-4EDF-AB20-AA5B38564CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB2FD6AA-65B4-4EDF-AB20-AA5B38564CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB2FD6AA-65B4-4EDF-AB20-AA5B38564CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D35967-F4C4-48DF-82F4-00E7FDEA8876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D35967-F4C4-48DF-82F4-00E7FDEA8876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D35967-F4C4-48DF-82F4-00E7FDEA8876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D35967-F4C4-48DF-82F4-00E7FDEA8876}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
